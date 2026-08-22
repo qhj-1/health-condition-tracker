@@ -1,4 +1,6 @@
-# 🩺 Health Condition Tracker（健康管理技能包）
+<p align="center"><img src="assets/logo.svg" width="110" alt="Health Condition Tracker logo"></p>
+
+<h1 align="center">🩺 Health Condition Tracker（健康管理技能包）</h1>
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Platform](https://img.shields.io/badge/Platform-Windows%20%2F%20macOS%20%2F%20Linux-lightgrey) ![Status](https://img.shields.io/badge/Status-Active-brightgreen) ![Tests](https://img.shields.io/badge/Regression-100%2B16%20cases-important)
 

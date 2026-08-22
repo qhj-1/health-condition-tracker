@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Health Condition Tracker logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f7fb5"/>
+      <stop offset="1" stop-color="#143a6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <!-- 心电脉冲线 -->
+  <path d="M34 128 h42 l16 -34 l24 68 l16 -80 l12 46 h78"
+        fill="none" stroke="#7ee8c8" stroke-width="15"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="34" cy="128" r="7" fill="#7ee8c8"/>
+  <circle cx="222" cy="128" r="7" fill="#7ee8c8"/>
+  <!-- 右下角小十字（医疗） -->
+  <path d="M196 198 v20 M186 208 h20" stroke="#9fd0ff" stroke-width="9" stroke-linecap="round"/>
+  <!-- 左上角小心形 -->
+  <path d="M56 62 c0 -8 12 -8 12 0 c0 -8 12 -8 12 0 c0 12 -12 18 -12 18 c0 0 -12 -6 -12 -18z"
+        fill="#ffd166"/>
+</svg>
