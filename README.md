@@ -2,7 +2,7 @@
 
 <h1 align="center">🩺 Health Condition Tracker（健康管理技能包）</h1>
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Platform](https://img.shields.io/badge/Platform-Windows%20%2F%20macOS%20%2F%20Linux-lightgrey) ![Status](https://img.shields.io/badge/Status-Active-brightgreen) ![Tests](https://img.shields.io/badge/Regression-100%2B16%20cases-important)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Platform](https://img.shields.io/badge/Platform-Windows%20%2F%20macOS%20%2F%20Linux-lightgrey) ![Status](https://img.shields.io/badge/Status-Active-brightgreen) ![Tests](https://img.shields.io/badge/Regression-100%2B16%20cases-important) [![Web](https://img.shields.io/badge/Web-%E6%8C%87%E4%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8-2f7fb5)](https://qhj-1.github.io/health-condition-tracker/)
 
 > 长期、全面、**符合一般人体感**地记录身体症状、生活习惯、用药与治疗方案；
 > 结合**国际权威指南（NHS / Mayo Clinic / CDC / WHO）**做风险分级与就诊路径建议；
@@ -34,6 +34,14 @@
 22. 难受程度客观评估（快速 3 题可选填 / 完整 7 维）
 23. 报告单/体检单/CT 报告文字解读（OCR + 参考范围 + 危急值）
 24. 国际权威就诊路径（NHS/Mayo/CDC/WHO，5 档 + 时间窗 + 升级条件，不搞一刀切）
+
+## 🌐 网页版指令选择器
+
+手机 / 电脑浏览器直接打开（免安装、离线也可用本地版）：
+
+**https://qhj-1.github.io/health-condition-tracker/**
+
+分类复制常用指令、定时任务模板，随时查随时用。
 
 ## 🚀 快速开始
 
