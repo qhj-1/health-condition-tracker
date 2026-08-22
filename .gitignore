@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 个人健康数据（切勿上传到公开仓库）
+members/
+backups/
+lab_reports/
+members_config.json
+reminders_ignore.json
+health_log.json
+medications.json
+treatment_plans.json
+vitals.json
+severity_history.json
+lab_report.md
+condition_report.html
+health_report.md
+
+# 压缩包 / 系统文件
+*.zip
+.DS_Store
+Thumbs.db

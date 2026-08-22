@@ -1,0 +1,13 @@
+# 病情视图报告指令（粘贴到 Codex 新对话或自动化）
+
+使用 health-condition-tracker 技能，为 <名字> 生成一份病情视图报告：
+1. 运行 D:\codex-skills\health-condition-tracker\scripts\condition_report.py --member <名字>；
+2. 用中文给我报告摘要：症状种类、记录条数、最近记录时间、进行中用药、待复诊项目；
+3. 指出趋势是否有加重（严重程度上升）的症状；
+4. 给出报告文件位置；
+最后附免责声明。
+
+也可在终端直接运行：
+    cd D:\codex-skills\health-condition-tracker
+    python scripts\condition_report.py --member <名字>
+    python scripts\condition_report.py --member <名字> --days 90   # 只看最近 90 天

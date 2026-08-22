@@ -1,0 +1,36 @@
+{
+  "_comment": "复制本文件为 api_config.json 后按需修改。disease_api.provider 可选：wikipedia（维基百科中文，默认，无需密钥）、disease_sh（disease.sh 公开接口，无需密钥）。",
+  "disease_api": {
+    "provider": "wikipedia",
+    "enabled": true,
+    "fallback_provider": "disease_sh"
+  },
+  "wikipedia": {
+    "_comment": "维基百科中文词条 API，无需密钥；language 可选 zh / en。",
+    "base_url": "https://zh.wikipedia.org/w/api.php",
+    "api_key": "",
+    "language": "zh"
+  },
+  "disease_sh": {
+    "_comment": "disease.sh 公开接口，无需密钥。",
+    "base_url": "https://disease.sh/v3/covid/diseases",
+    "api_key": "",
+    "enabled": true
+  },
+  "ocr": {
+    "engine": "tesseract",
+    "language": "chi_sim+eng"
+  },
+  "search": {
+    "_comment": "联网搜索配置：engines 为搜索源顺序（duckduckgo / bing / mojeek / brave / wikipedia，均免密钥，brave 部分网络可能被拦截会自动跳过）；language 为维基百科语言（zh/en）。搜索默认多引擎交叉验证并优先官方来源（见 official_domains.json）。",
+    "engines": [
+      "duckduckgo",
+      "bing",
+      "mojeek",
+      "wikipedia",
+      "brave"
+    ],
+    "max_results": 5,
+    "language": "zh"
+  }
+}

@@ -1,0 +1,184 @@
+[
+  {
+    "id": "e001",
+    "symptoms": [
+      "腹痛"
+    ],
+    "severity": null,
+    "duration_days": null,
+    "trend": "",
+    "note": "只说肚子疼",
+    "expected": "中"
+  },
+  {
+    "id": "e002",
+    "symptoms": [
+      "胸痛"
+    ],
+    "severity": null,
+    "duration_days": null,
+    "trend": "",
+    "note": "只说胸痛",
+    "expected": "中"
+  },
+  {
+    "id": "e003",
+    "symptoms": [
+      "咳嗽"
+    ],
+    "severity": null,
+    "duration_days": null,
+    "trend": "",
+    "note": "只说咳嗽",
+    "expected": "中"
+  },
+  {
+    "id": "e004",
+    "symptoms": [
+      "头痛"
+    ],
+    "severity": 4,
+    "duration_days": null,
+    "trend": "",
+    "note": "有分数没病程",
+    "expected": "中"
+  },
+  {
+    "id": "e005",
+    "symptoms": [
+      "腹泻"
+    ],
+    "severity": null,
+    "duration_days": 5,
+    "trend": "",
+    "note": "有病程没分数",
+    "expected": "中"
+  },
+  {
+    "id": "e006",
+    "symptoms": [
+      "发热",
+      "咳嗽"
+    ],
+    "severity": 3,
+    "duration_days": 2,
+    "trend": "",
+    "note": "组合：感冒样",
+    "expected": "低"
+  },
+  {
+    "id": "e007",
+    "symptoms": [
+      "发热",
+      "咳嗽",
+      "乏力"
+    ],
+    "severity": 6,
+    "duration_days": 5,
+    "trend": "",
+    "note": "组合：较重",
+    "expected": "中"
+  },
+  {
+    "id": "e008",
+    "symptoms": [
+      "胸痛",
+      "呼吸困难"
+    ],
+    "severity": 7,
+    "duration_days": 1,
+    "trend": "",
+    "note": "组合：高危",
+    "expected": "紧急"
+  },
+  {
+    "id": "e009",
+    "symptoms": [
+      "腹痛",
+      "恶心"
+    ],
+    "severity": 5,
+    "duration_days": 2,
+    "trend": "",
+    "note": "组合：消化道",
+    "expected": "中"
+  },
+  {
+    "id": "e010",
+    "symptoms": [
+      "头痛",
+      "头晕"
+    ],
+    "severity": 3,
+    "duration_days": 30,
+    "trend": "",
+    "note": "组合：慢性",
+    "expected": "中"
+  },
+  {
+    "id": "e011",
+    "symptoms": [
+      "失眠"
+    ],
+    "severity": 6,
+    "duration_days": 45,
+    "trend": "平稳",
+    "note": "慢性失眠",
+    "expected": "低"
+  },
+  {
+    "id": "e012",
+    "symptoms": [
+      "咽喉痛"
+    ],
+    "severity": 5,
+    "duration_days": 2,
+    "trend": "",
+    "note": "普通咽痛",
+    "expected": "中"
+  },
+  {
+    "id": "e013",
+    "symptoms": [
+      "胃胀"
+    ],
+    "severity": 3,
+    "duration_days": null,
+    "trend": "",
+    "note": "只说胃胀",
+    "expected": "低"
+  },
+  {
+    "id": "e014",
+    "symptoms": [
+      "腰背痛"
+    ],
+    "severity": 7,
+    "duration_days": 60,
+    "trend": "平稳",
+    "note": "慢性腰痛重",
+    "expected": "中"
+  },
+  {
+    "id": "e015",
+    "symptoms": [
+      "腹泻"
+    ],
+    "severity": 2,
+    "duration_days": 3,
+    "trend": "好转",
+    "note": "快好了但超2天",
+    "expected": "低"
+  },
+  {
+    "id": "e016",
+    "symptoms": [
+      "皮疹"
+    ],
+    "severity": 4,
+    "duration_days": 2,
+    "trend": "",
+    "note": "皮疹2天",
+    "expected": "中"
+  }
+]

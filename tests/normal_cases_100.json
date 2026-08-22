@@ -1,0 +1,902 @@
+[
+  {
+    "id": "n001",
+    "symptom": "头痛",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n002",
+    "symptom": "腹泻",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n003",
+    "symptom": "咳嗽",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n004",
+    "symptom": "咽喉痛",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n005",
+    "symptom": "鼻塞",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n006",
+    "symptom": "流鼻涕",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n007",
+    "symptom": "胃胀",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n008",
+    "symptom": "反酸",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n009",
+    "symptom": "打嗝",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n010",
+    "symptom": "口苦",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n011",
+    "symptom": "口腔溃疡",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n012",
+    "symptom": "眼干",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n013",
+    "symptom": "皮肤瘙痒",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n014",
+    "symptom": "肌肉痛",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n015",
+    "symptom": "头晕",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n016",
+    "symptom": "失眠",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n017",
+    "symptom": "乏力",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n018",
+    "symptom": "便秘",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n019",
+    "symptom": "恶心",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n020",
+    "symptom": "耳鸣",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n021",
+    "symptom": "怕冷",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n022",
+    "symptom": "腹痛",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n023",
+    "symptom": "发热",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n024",
+    "symptom": "头痛",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n025",
+    "symptom": "腹泻",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n026",
+    "symptom": "咳嗽",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n027",
+    "symptom": "咽喉痛",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n028",
+    "symptom": "鼻塞",
+    "severity": 2,
+    "duration_days": 2,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n029",
+    "symptom": "流鼻涕",
+    "severity": 3,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n030",
+    "symptom": "胃胀",
+    "severity": 1,
+    "duration_days": 1,
+    "trend": "好转",
+    "expected": "低",
+    "note": "轻度短期，普通情况"
+  },
+  {
+    "id": "n031",
+    "symptom": "腹泻",
+    "severity": 2,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n032",
+    "symptom": "便秘",
+    "severity": 3,
+    "duration_days": 23,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n033",
+    "symptom": "咳嗽",
+    "severity": 4,
+    "duration_days": 22,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n034",
+    "symptom": "乏力",
+    "severity": 2,
+    "duration_days": 16,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n035",
+    "symptom": "口腔溃疡",
+    "severity": 3,
+    "duration_days": 22,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n036",
+    "symptom": "失眠",
+    "severity": 4,
+    "duration_days": 32,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n037",
+    "symptom": "关节痛",
+    "severity": 2,
+    "duration_days": 15,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n038",
+    "symptom": "腰背痛",
+    "severity": 3,
+    "duration_days": 44,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n039",
+    "symptom": "便血",
+    "severity": 4,
+    "duration_days": 8,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n040",
+    "symptom": "尿路症状",
+    "severity": 2,
+    "duration_days": 6,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "轻度但超国际指南建议就诊时长"
+  },
+  {
+    "id": "n041",
+    "symptom": "发热",
+    "severity": 4,
+    "duration_days": 1,
+    "trend": "加重",
+    "expected": "中危",
+    "note": "中度短期"
+  },
+  {
+    "id": "n042",
+    "symptom": "腹痛",
+    "severity": 5,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n043",
+    "symptom": "心悸",
+    "severity": 6,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n044",
+    "symptom": "关节痛",
+    "severity": 4,
+    "duration_days": 4,
+    "trend": "加重",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n045",
+    "symptom": "腰背痛",
+    "severity": 5,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "中度短期"
+  },
+  {
+    "id": "n046",
+    "symptom": "皮疹",
+    "severity": 6,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n047",
+    "symptom": "呕吐",
+    "severity": 4,
+    "duration_days": 3,
+    "trend": "加重",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n048",
+    "symptom": "恶心",
+    "severity": 5,
+    "duration_days": 4,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n049",
+    "symptom": "头晕",
+    "severity": 6,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "中度短期"
+  },
+  {
+    "id": "n050",
+    "symptom": "食欲不振",
+    "severity": 4,
+    "duration_days": 2,
+    "trend": "加重",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n051",
+    "symptom": "尿频",
+    "severity": 5,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n052",
+    "symptom": "痛经",
+    "severity": 6,
+    "duration_days": 4,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "中度短期"
+  },
+  {
+    "id": "n053",
+    "symptom": "耳鸣",
+    "severity": 4,
+    "duration_days": 1,
+    "trend": "加重",
+    "expected": "中危",
+    "note": "中度短期"
+  },
+  {
+    "id": "n054",
+    "symptom": "失眠",
+    "severity": 5,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "中度短期"
+  },
+  {
+    "id": "n055",
+    "symptom": "咳嗽",
+    "severity": 6,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n056",
+    "symptom": "咽喉痛",
+    "severity": 4,
+    "duration_days": 4,
+    "trend": "加重",
+    "expected": "中危",
+    "note": "中度短期"
+  },
+  {
+    "id": "n057",
+    "symptom": "头痛",
+    "severity": 5,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n058",
+    "symptom": "肌肉痛",
+    "severity": 6,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "中度短期"
+  },
+  {
+    "id": "n059",
+    "symptom": "出汗过多",
+    "severity": 4,
+    "duration_days": 3,
+    "trend": "加重",
+    "expected": "中危",
+    "note": "中度短期"
+  },
+  {
+    "id": "n060",
+    "symptom": "手抖",
+    "severity": 5,
+    "duration_days": 4,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度短期"
+  },
+  {
+    "id": "n061",
+    "symptom": "腹泻",
+    "severity": 4,
+    "duration_days": 6,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n062",
+    "symptom": "便秘",
+    "severity": 4,
+    "duration_days": 25,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n063",
+    "symptom": "咳嗽",
+    "severity": 5,
+    "duration_days": 25,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n064",
+    "symptom": "乏力",
+    "severity": 5,
+    "duration_days": 20,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n065",
+    "symptom": "关节痛",
+    "severity": 5,
+    "duration_days": 20,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n066",
+    "symptom": "腰背痛",
+    "severity": 6,
+    "duration_days": 50,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n067",
+    "symptom": "失眠",
+    "severity": 5,
+    "duration_days": 35,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n068",
+    "symptom": "口腔溃疡",
+    "severity": 4,
+    "duration_days": 25,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n069",
+    "symptom": "耳鸣",
+    "severity": 5,
+    "duration_days": 10,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n070",
+    "symptom": "皮疹",
+    "severity": 4,
+    "duration_days": 10,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "中度且超建议就诊时长"
+  },
+  {
+    "id": "n071",
+    "symptom": "咳嗽",
+    "severity": 7,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n072",
+    "symptom": "失眠",
+    "severity": 8,
+    "duration_days": 20,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n073",
+    "symptom": "关节痛",
+    "severity": 8,
+    "duration_days": 5,
+    "trend": "加重",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n074",
+    "symptom": "腰背痛",
+    "severity": 8,
+    "duration_days": 120,
+    "trend": "平稳",
+    "expected": "中",
+    "note": "程度较重"
+  },
+  {
+    "id": "n075",
+    "symptom": "头痛",
+    "severity": 7,
+    "duration_days": 2,
+    "trend": "加重",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n076",
+    "symptom": "腹痛",
+    "severity": 8,
+    "duration_days": 2,
+    "trend": "加重",
+    "expected": "紧急",
+    "note": "程度较重"
+  },
+  {
+    "id": "n077",
+    "symptom": "发热",
+    "severity": 7,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n078",
+    "symptom": "心悸",
+    "severity": 8,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n079",
+    "symptom": "乏力",
+    "severity": 7,
+    "duration_days": 30,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n080",
+    "symptom": "恶心",
+    "severity": 7,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n081",
+    "symptom": "头晕",
+    "severity": 8,
+    "duration_days": 2,
+    "trend": "加重",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n082",
+    "symptom": "咽喉痛",
+    "severity": 7,
+    "duration_days": 5,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n083",
+    "symptom": "肌肉痛",
+    "severity": 7,
+    "duration_days": 2,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n084",
+    "symptom": "便秘",
+    "severity": 7,
+    "duration_days": 20,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n085",
+    "symptom": "皮疹",
+    "severity": 7,
+    "duration_days": 3,
+    "trend": "平稳",
+    "expected": "中危",
+    "note": "程度较重"
+  },
+  {
+    "id": "n086",
+    "symptom": "腹痛",
+    "severity": 4,
+    "duration_days": 90,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n087",
+    "symptom": "头痛",
+    "severity": 3,
+    "duration_days": 120,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n088",
+    "symptom": "腰背痛",
+    "severity": 5,
+    "duration_days": 180,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n089",
+    "symptom": "关节痛",
+    "severity": 4,
+    "duration_days": 200,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n090",
+    "symptom": "便秘",
+    "severity": 3,
+    "duration_days": 150,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n091",
+    "symptom": "失眠",
+    "severity": 5,
+    "duration_days": 240,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n092",
+    "symptom": "乏力",
+    "severity": 4,
+    "duration_days": 120,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n093",
+    "symptom": "耳鸣",
+    "severity": 3,
+    "duration_days": 300,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n094",
+    "symptom": "胃胀",
+    "severity": 3,
+    "duration_days": 120,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n095",
+    "symptom": "咳嗽",
+    "severity": 3,
+    "duration_days": 90,
+    "trend": "平稳",
+    "expected": "低",
+    "note": "慢性稳定，长期客观看待"
+  },
+  {
+    "id": "n096",
+    "symptom": "呼吸困难",
+    "severity": 6,
+    "duration_days": 1,
+    "trend": "平稳",
+    "expected": "紧急",
+    "note": "真紧急/极重度"
+  },
+  {
+    "id": "n097",
+    "symptom": "呼吸困难",
+    "severity": 8,
+    "duration_days": 1,
+    "trend": "加重",
+    "expected": "紧急",
+    "note": "真紧急/极重度"
+  },
+  {
+    "id": "n098",
+    "symptom": "胸痛",
+    "severity": 9,
+    "duration_days": 1,
+    "trend": "加重",
+    "expected": "紧急",
+    "note": "真紧急/极重度"
+  },
+  {
+    "id": "n099",
+    "symptom": "高热",
+    "severity": 9,
+    "duration_days": 2,
+    "trend": "加重",
+    "expected": "紧急",
+    "note": "真紧急/极重度"
+  },
+  {
+    "id": "n100",
+    "symptom": "头痛",
+    "severity": 10,
+    "duration_days": 1,
+    "trend": "加重",
+    "expected": "紧急",
+    "note": "真紧急/极重度"
+  }
+]

@@ -1,0 +1,29 @@
+============================================================
+就诊前报告 —— 指令模板（health-condition-tracker）
+============================================================
+
+【用途】
+就诊前一天 / 当天，为某位成员生成结构化医生沟通报告，方便直接带去看医生。
+
+【前置条件】
+- 技能已安装：D:\codex-skills\health-condition-tracker（换过位置请改路径）
+- 该成员已有健康记录（symptom_log / medication_tracker / treatment_plan）
+
+【任务指令（直接复制粘贴，把 <名字> 换成成员名，如 妈妈）】
+运行 D:\codex-skills\health-condition-tracker\scripts\report_generator.py --member <名字>，
+然后用中文给我：
+1. 报告核心摘要（主诉 / 症状时间线 / 用药清单 / 治疗方案与复诊）
+2. 提醒我检查报告中是否含姓名、身份证号、手机号等个人信息（应已脱敏）
+3. 列出就诊时建议咨询医生的问题清单（3-5 个，基于现有记录生成）
+4. 给出报告文件位置
+最后附免责声明。
+
+【手动运行】
+也可在终端直接运行：
+  python D:\codex-skills\health-condition-tracker\scripts\report_generator.py --member 妈妈
+报告保存在：
+  D:\codex-skills\health-condition-tracker\scripts\members\妈妈\health_report.md
+
+【注意事项】
+- 报告只汇总已记录的数据；就诊前请把近期新症状 / 新用药补录完整再生成。
+- 生成后请人工核对，报告仅供参考，不能替代专业医疗诊断。

@@ -1,0 +1,370 @@
+{
+  "version": "1.0",
+  "说明": "常用检验/体检项目参考范围（通用成人范围，各医院可能不同，以报告单为准）；critical 为危急值提醒，不构成诊断。",
+  "items": [
+    {
+      "name": "白细胞计数",
+      "aliases": [
+        "白细胞",
+        "wbc"
+      ],
+      "unit": "×10^9/L",
+      "range_min": 3.5,
+      "range_max": 9.5,
+      "hint": "升高常见于感染/炎症/应激，降低可见于病毒感染或血液系统疾病"
+    },
+    {
+      "name": "红细胞计数",
+      "aliases": [
+        "红细胞",
+        "rbc"
+      ],
+      "unit": "×10^12/L",
+      "range_min": 3.8,
+      "range_max": 5.8,
+      "hint": "与贫血、脱水等有关"
+    },
+    {
+      "name": "血红蛋白",
+      "aliases": [
+        "血红蛋白",
+        "hgb",
+        "hb"
+      ],
+      "unit": "g/L",
+      "range_min": 115,
+      "range_max": 175,
+      "hint": "低于参考提示贫血，明显降低建议尽快就诊",
+      "critical": {
+        "low": 60
+      }
+    },
+    {
+      "name": "血小板计数",
+      "aliases": [
+        "血小板",
+        "plt"
+      ],
+      "unit": "×10^9/L",
+      "range_min": 125,
+      "range_max": 350,
+      "hint": "明显降低有出血风险，升高需排查炎症/血液疾病",
+      "critical": {
+        "low": 20,
+        "high": 800
+      }
+    },
+    {
+      "name": "中性粒细胞百分比",
+      "aliases": [
+        "中性粒细胞",
+        "neut%",
+        "neut"
+      ],
+      "unit": "%",
+      "range_min": 40,
+      "range_max": 75,
+      "hint": "升高常见于细菌感染"
+    },
+    {
+      "name": "淋巴细胞百分比",
+      "aliases": [
+        "淋巴细胞",
+        "lymph%",
+        "lymph"
+      ],
+      "unit": "%",
+      "range_min": 20,
+      "range_max": 50,
+      "hint": "升高常见于病毒感染"
+    },
+    {
+      "name": "空腹血糖",
+      "aliases": [
+        "血糖",
+        "葡萄糖",
+        "glu"
+      ],
+      "unit": "mmol/L",
+      "range_min": 3.9,
+      "range_max": 6.1,
+      "hint": "空腹≥7.0 或餐后明显升高需排查糖尿病",
+      "critical": {
+        "low": 2.8,
+        "high": 16.7
+      }
+    },
+    {
+      "name": "糖化血红蛋白",
+      "aliases": [
+        "糖化血红蛋白",
+        "hba1c"
+      ],
+      "unit": "%",
+      "range_min": 4,
+      "range_max": 6,
+      "hint": "反映近2-3个月平均血糖"
+    },
+    {
+      "name": "总胆固醇",
+      "aliases": [
+        "总胆固醇",
+        "tc"
+      ],
+      "unit": "mmol/L",
+      "range_max": 5.2,
+      "hint": "升高与心血管风险相关"
+    },
+    {
+      "name": "甘油三酯",
+      "aliases": [
+        "甘油三酯",
+        "tg"
+      ],
+      "unit": "mmol/L",
+      "range_max": 1.7,
+      "hint": "升高与饮食、代谢相关"
+    },
+    {
+      "name": "低密度脂蛋白",
+      "aliases": [
+        "低密度脂蛋白",
+        "ldl",
+        "ldl-c"
+      ],
+      "unit": "mmol/L",
+      "range_max": 3.4,
+      "hint": "升高与动脉粥样硬化风险相关"
+    },
+    {
+      "name": "高密度脂蛋白",
+      "aliases": [
+        "高密度脂蛋白",
+        "hdl",
+        "hdl-c"
+      ],
+      "unit": "mmol/L",
+      "range_min": 1,
+      "hint": "偏低与心血管风险相关"
+    },
+    {
+      "name": "谷丙转氨酶",
+      "aliases": [
+        "谷丙转氨酶",
+        "alt"
+      ],
+      "unit": "U/L",
+      "range_min": 7,
+      "range_max": 40,
+      "hint": "升高需排查肝损伤/脂肪肝等"
+    },
+    {
+      "name": "谷草转氨酶",
+      "aliases": [
+        "谷草转氨酶",
+        "ast"
+      ],
+      "unit": "U/L",
+      "range_min": 13,
+      "range_max": 35,
+      "hint": "升高需结合临床排查"
+    },
+    {
+      "name": "总胆红素",
+      "aliases": [
+        "总胆红素",
+        "tbil"
+      ],
+      "unit": "μmol/L",
+      "range_min": 5,
+      "range_max": 21,
+      "hint": "升高需排查肝胆疾病"
+    },
+    {
+      "name": "肌酐",
+      "aliases": [
+        "肌酐",
+        "cr"
+      ],
+      "unit": "μmol/L",
+      "range_min": 44,
+      "range_max": 133,
+      "hint": "明显升高提示肾功能问题，建议就诊",
+      "critical": {
+        "high": 400
+      }
+    },
+    {
+      "name": "尿素氮",
+      "aliases": [
+        "尿素氮",
+        "bun"
+      ],
+      "unit": "mmol/L",
+      "range_min": 3.1,
+      "range_max": 8,
+      "hint": "升高需结合肌酐与临床判断"
+    },
+    {
+      "name": "尿酸",
+      "aliases": [
+        "尿酸",
+        "ua"
+      ],
+      "unit": "μmol/L",
+      "range_min": 150,
+      "range_max": 420,
+      "hint": "升高与痛风/代谢相关"
+    },
+    {
+      "name": "血钾",
+      "aliases": [
+        "血钾",
+        "钾",
+        "k+"
+      ],
+      "unit": "mmol/L",
+      "range_min": 3.5,
+      "range_max": 5.3,
+      "hint": "异常可影响心脏，明显异常请尽快就诊",
+      "critical": {
+        "low": 3,
+        "high": 6
+      }
+    },
+    {
+      "name": "血钠",
+      "aliases": [
+        "血钠",
+        "钠",
+        "na+"
+      ],
+      "unit": "mmol/L",
+      "range_min": 137,
+      "range_max": 147,
+      "hint": "明显异常需就医评估"
+    },
+    {
+      "name": "血钙",
+      "aliases": [
+        "血钙",
+        "钙",
+        "ca2+"
+      ],
+      "unit": "mmol/L",
+      "range_min": 2.11,
+      "range_max": 2.52,
+      "hint": "异常需结合临床评估"
+    },
+    {
+      "name": "促甲状腺激素",
+      "aliases": [
+        "促甲状腺激素",
+        "tsh"
+      ],
+      "unit": "mIU/L",
+      "range_min": 0.27,
+      "range_max": 4.2,
+      "hint": "异常提示甲状腺功能可能异常"
+    },
+    {
+      "name": "白蛋白",
+      "aliases": [
+        "白蛋白",
+        "alb"
+      ],
+      "unit": "g/L",
+      "range_min": 40,
+      "range_max": 55,
+      "hint": "降低与营养/肝脏/肾脏有关"
+    },
+    {
+      "name": "总蛋白",
+      "aliases": [
+        "总蛋白",
+        "tp"
+      ],
+      "unit": "g/L",
+      "range_min": 65,
+      "range_max": 85,
+      "hint": "异常需结合临床评估"
+    },
+    {
+      "name": "甲胎蛋白",
+      "aliases": [
+        "甲胎蛋白",
+        "afp"
+      ],
+      "unit": "ng/mL",
+      "range_max": 7,
+      "hint": "升高需结合影像与临床排查"
+    },
+    {
+      "name": "癌胚抗原",
+      "aliases": [
+        "癌胚抗原",
+        "cea"
+      ],
+      "unit": "ng/mL",
+      "range_max": 5,
+      "hint": "升高需结合临床，不代表确诊肿瘤"
+    },
+    {
+      "name": "血压",
+      "aliases": [
+        "血压",
+        "bp"
+      ],
+      "unit": "mmHg",
+      "range_min": 90,
+      "range_max": 139,
+      "hint": "收缩压/舒张压；持续升高建议就诊心内科"
+    },
+    {
+      "name": "心率",
+      "aliases": [
+        "心率",
+        "脉搏",
+        "pulse"
+      ],
+      "unit": "次/分",
+      "range_min": 60,
+      "range_max": 100,
+      "hint": "明显异常需结合症状评估"
+    },
+    {
+      "name": "体温",
+      "aliases": [
+        "体温",
+        "温度"
+      ],
+      "unit": "℃",
+      "range_min": 36,
+      "range_max": 37.3,
+      "hint": "≥37.3 提示发热"
+    },
+    {
+      "name": "血氧饱和度",
+      "aliases": [
+        "血氧饱和度",
+        "血氧",
+        "spo2"
+      ],
+      "unit": "%",
+      "range_min": 95,
+      "range_max": 100,
+      "hint": "低于 95% 建议就医评估",
+      "critical": {
+        "low": 90
+      }
+    },
+    {
+      "name": "体重",
+      "aliases": [
+        "体重"
+      ],
+      "unit": "kg",
+      "hint": "以个人基线为准，短期大幅波动需评估"
+    }
+  ]
+}

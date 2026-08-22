@@ -1,0 +1,291 @@
+{
+  "version": "1.0",
+  "language": "zh-CN",
+  "categories": {
+    "general": {
+      "name": "一般情况",
+      "questions": [
+        {
+          "id": "fever",
+          "question": "最近是否有发热（体温 ≥ 37.3℃）？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "fatigue",
+          "question": "是否感到疲劳乏力？程度如何（1-10）？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "weight_change",
+          "question": "近期体重是否有明显变化（增/减多少）？",
+          "type": "text"
+        },
+        {
+          "id": "night_sweats",
+          "question": "是否有盗汗（夜间出汗）？",
+          "type": "boolean"
+        }
+      ]
+    },
+    "head_neck": {
+      "name": "头颈部",
+      "questions": [
+        {
+          "id": "headache",
+          "question": "是否有头痛？程度如何（1-10）？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "dizziness",
+          "question": "是否有头晕？",
+          "type": "boolean"
+        },
+        {
+          "id": "blurred_vision",
+          "question": "是否有视力模糊？",
+          "type": "boolean"
+        },
+        {
+          "id": "tinnitus",
+          "question": "是否有耳鸣？",
+          "type": "boolean"
+        },
+        {
+          "id": "sore_throat",
+          "question": "是否有咽喉痛？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "neck_mass",
+          "question": "颈部是否有肿块？",
+          "type": "boolean"
+        }
+      ]
+    },
+    "chest": {
+      "name": "胸部",
+      "questions": [
+        {
+          "id": "cough",
+          "question": "是否有咳嗽？",
+          "type": "boolean"
+        },
+        {
+          "id": "chest_pain",
+          "question": "是否有胸痛？程度如何（1-10）？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "dyspnea",
+          "question": "是否有呼吸困难？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "palpitation",
+          "question": "是否有心悸（心跳明显）？",
+          "type": "boolean"
+        }
+      ]
+    },
+    "digestive": {
+      "name": "消化系统",
+      "questions": [
+        {
+          "id": "abdominal_pain",
+          "question": "是否有腹痛？程度如何（1-10）？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "nausea",
+          "question": "是否有恶心？",
+          "type": "boolean"
+        },
+        {
+          "id": "diarrhea",
+          "question": "是否有腹泻？",
+          "type": "boolean"
+        },
+        {
+          "id": "constipation",
+          "question": "是否有便秘？",
+          "type": "boolean"
+        },
+        {
+          "id": "bloody_stool",
+          "question": "是否有便血？",
+          "type": "boolean"
+        },
+        {
+          "id": "appetite_change",
+          "question": "食欲是否有明显变化？",
+          "type": "text"
+        }
+      ]
+    },
+    "urinary": {
+      "name": "泌尿系统",
+      "questions": [
+        {
+          "id": "frequent_urination",
+          "question": "是否有尿频？",
+          "type": "boolean"
+        },
+        {
+          "id": "dysuria",
+          "question": "是否有排尿困难或尿痛？",
+          "type": "boolean"
+        },
+        {
+          "id": "hematuria",
+          "question": "是否有血尿？",
+          "type": "boolean"
+        },
+        {
+          "id": "urinary_urgency",
+          "question": "是否有尿急？",
+          "type": "boolean"
+        }
+      ]
+    },
+    "skin": {
+      "name": "皮肤",
+      "questions": [
+        {
+          "id": "rash",
+          "question": "是否有皮疹？",
+          "type": "boolean"
+        },
+        {
+          "id": "easy_bruising",
+          "question": "是否容易瘀伤？",
+          "type": "boolean"
+        },
+        {
+          "id": "wound",
+          "question": "是否有伤口或溃疡（部位、愈合情况）？",
+          "type": "text"
+        },
+        {
+          "id": "skin_color_change",
+          "question": "皮肤颜色是否有改变？",
+          "type": "boolean"
+        }
+      ]
+    },
+    "musculoskeletal": {
+      "name": "肌肉骨骼",
+      "questions": [
+        {
+          "id": "joint_pain",
+          "question": "是否有关节痛？程度如何（1-10）？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "muscle_pain",
+          "question": "是否有肌肉痛？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "swelling",
+          "question": "是否有肿胀？",
+          "type": "boolean"
+        },
+        {
+          "id": "limited_mobility",
+          "question": "是否有活动受限？",
+          "type": "boolean"
+        },
+        {
+          "id": "morning_stiffness",
+          "question": "是否有晨僵（早晨关节僵硬）？",
+          "type": "boolean"
+        }
+      ]
+    },
+    "neurological": {
+      "name": "神经系统",
+      "questions": [
+        {
+          "id": "numbness",
+          "question": "是否有麻木？",
+          "type": "boolean"
+        },
+        {
+          "id": "weakness",
+          "question": "是否有肢体无力？",
+          "type": "boolean"
+        },
+        {
+          "id": "convulsion",
+          "question": "是否有抽搐？",
+          "type": "boolean"
+        },
+        {
+          "id": "memory_loss",
+          "question": "是否有记忆力下降？",
+          "type": "boolean"
+        },
+        {
+          "id": "sleep_disorder",
+          "question": "是否有睡眠障碍？",
+          "type": "boolean"
+        },
+        {
+          "id": "mood_change",
+          "question": "情绪是否有明显变化？",
+          "type": "text"
+        }
+      ]
+    },
+    "reproductive": {
+      "name": "生殖健康",
+      "questions": [
+        {
+          "id": "dysmenorrhea",
+          "question": "是否有痛经？",
+          "type": "boolean_or_value"
+        },
+        {
+          "id": "irregular_menses",
+          "question": "月经周期是否规律？",
+          "type": "boolean"
+        },
+        {
+          "id": "abnormal_bleeding",
+          "question": "是否有异常阴道出血（经间期或绝经后出血）？",
+          "type": "boolean"
+        },
+        {
+          "id": "abnormal_discharge",
+          "question": "是否有白带异常（颜色、气味、量）？",
+          "type": "boolean"
+        },
+        {
+          "id": "amenorrhea",
+          "question": "是否有闭经（超过 3 个月无月经）？",
+          "type": "boolean"
+        },
+        {
+          "id": "pms",
+          "question": "经前是否有明显乳房胀痛、情绪波动或腹痛？",
+          "type": "boolean_or_value"
+        }
+      ]
+    },
+    "other": {
+      "name": "其他补充",
+      "questions": [
+        {
+          "id": "other_symptoms",
+          "question": "是否有其他未提及的症状？请描述。",
+          "type": "text"
+        },
+        {
+          "id": "additional_notes",
+          "question": "还有其他想补充的健康信息吗？",
+          "type": "text"
+        }
+      ]
+    }
+  }
+}

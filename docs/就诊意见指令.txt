@@ -1,0 +1,17 @@
+# 就诊意见指令（粘贴到 Codex 新对话）
+
+使用 health-condition-tracker 技能，为 <名字> 提供就诊意见和医院推荐：
+1. 先问我患者所在城市（和省份）；
+2. 运行 D:\codex-skills\health-condition-tracker\scripts\hospital_advice.py --member <名字> --city <城市> --province <省份>；
+3. 用中文给我：
+   - 建议就诊科室及原因；
+   - 同城 / 同省 / 全国十大医院（各列前几名）；
+   - 性价比方案：就近三甲普通门诊先做基础检查；
+   - 最优方案：离我最近的全国十大医院专家门诊，跨省提示异地就医备案；
+   - 挂号渠道与费用预估；
+4. 命中紧急症状时先提醒我就近急诊，不要跨城。
+最后附免责声明：医院信息来自公开资料，仅供参考，以官方渠道为准。
+
+也可在终端直接运行：
+    cd D:\codex-skills\health-condition-tracker
+    python scripts\hospital_advice.py --symptoms 头痛 --city 杭州

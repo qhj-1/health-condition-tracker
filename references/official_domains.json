@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "说明": "用于联网搜索时标记官方/权威来源并优先展示；可按需自行增删。",
+  "suffixes": [
+    ".gov.cn",
+    ".gov",
+    ".edu.cn",
+    ".edu",
+    ".org.cn",
+    ".ac.cn",
+    ".mil.cn",
+    ".mil"
+  ],
+  "domains": [
+    "nhc.gov.cn",
+    "chinacdc.cn",
+    "nmpa.gov.cn",
+    "nhsa.gov.cn",
+    "moh.gov.cn",
+    "miit.gov.cn",
+    "who.int",
+    "cdc.gov",
+    "fda.gov",
+    "nih.gov",
+    "ecdc.europa.eu",
+    "pubmed.ncbi.nlm.nih.gov",
+    "cma.org.cn",
+    "cma.org",
+    "cmap.org.cn",
+    "cnsa.org.cn",
+    "csco.org.cn",
+    "cn-healthcare.com",
+    "medlive.cn",
+    "dxy.cn",
+    "yiigle.com",
+    "ivdchina.org",
+    "chinahospital.org.cn",
+    "nhei.org.cn"
+  ],
+  "keywords": [
+    "nhc",
+    "chinacdc",
+    "nmpa",
+    "nhsa",
+    "who.int",
+    "cdc.gov",
+    "fda.gov",
+    "nih.gov",
+    "pubmed",
+    "moh"
+  ]
+}

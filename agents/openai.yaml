@@ -1,0 +1,4 @@
+interface:
+  display_name: "Health Condition Tracker"
+  short_description: "记录病情、分析症状、管理用药并生成医生沟通报告"
+  default_prompt: "使用 $health-condition-tracker 记录我的健康状况、分析症状并生成健康建议。"

@@ -1,0 +1,31 @@
+{
+  "disease_api": {
+    "provider": "wikipedia",
+    "enabled": true,
+    "fallback_provider": "disease_sh"
+  },
+  "wikipedia": {
+    "base_url": "https://zh.wikipedia.org/w/api.php",
+    "api_key": "",
+    "language": "zh"
+  },
+  "disease_sh": {
+    "base_url": "https://disease.sh/v3/covid/diseases",
+    "api_key": "",
+    "enabled": true
+  },
+  "ocr": {
+    "engine": "tesseract",
+    "language": "chi_sim+eng"
+  },
+  "search": {
+    "engines": [
+      "duckduckgo",
+      "bing",
+      "mojeek",
+      "wikipedia"
+    ],
+    "max_results": 5,
+    "language": "zh"
+  }
+}
