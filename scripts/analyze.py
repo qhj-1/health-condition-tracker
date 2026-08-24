@@ -259,7 +259,7 @@ def analyze(symptoms, member=None, days=0, severity=None, quiz=None, duration_da
             thr = care_map.get(sym, {}).get("appointment_after_days")
             if thr and duration_days >= thr and trend != "好转":
                 overdue.append(sym)
-    risk = assess_risk(all_syms, scored, severity=severity, quiz=quiz, course=course, overdue=overdue)
+    risk = assess_risk(all_syms, scored, severity=severity, quiz=quiz, course=course, overdue=overdue, trend=trend)
     return {
         "symptoms": all_syms,
         "history": history,
@@ -273,7 +273,7 @@ def analyze(symptoms, member=None, days=0, severity=None, quiz=None, duration_da
     }
 
 
-def assess_risk(symptoms, scored, severity=None, quiz=None, course=None, overdue=None):
+def assess_risk(symptoms, scored, severity=None, quiz=None, course=None, overdue=None, trend=""):
     """风险分级（保守筛查，不吓人）。
 
     规则：
@@ -345,8 +345,8 @@ def assess_risk(symptoms, scored, severity=None, quiz=None, course=None, overdue
         if quiz.get("red_flag"):
             urgent_hits.append("客观评估命中紧急警示")
             reasons.append("客观评估命中紧急警示：「{}」".format(quiz.get("red_flag_hit") or "是"))
-        trend = (quiz.get("dimensions") or {}).get("时间趋势", {})
-        if trend.get("label") == "快速恶化":
+        quiz_trend = (quiz.get("dimensions") or {}).get("时间趋势", {})
+        if quiz_trend.get("label") == "快速恶化":
             watch_hits.append("快速恶化")
             reasons.append("客观评估提示快速恶化")
         try:

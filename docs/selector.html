@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health Condition Tracker 指令选择器</title>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; color: #222; background: #f6f8fa; }
+  h1 { font-size: 24px; }
+  .note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #7a5c00; margin-bottom: 16px; }
+  .cat { font-size: 16px; color: #1f4e79; border-left: 4px solid #1f4e79; padding-left: 8px; margin: 28px 0 10px; }
+  .card { background: #fff; border: 1px solid #dfe3e8; border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+  .card-head { display: flex; justify-content: space-between; align-items: center; }
+  .card-head h3 { margin: 0; font-size: 15px; }
+  .desc { margin: 6px 0; font-size: 13px; color: #555; }
+  pre { background: #f1f3f5; border: 1px solid #e3e6ea; border-radius: 6px; padding: 10px; font-size: 12.5px; white-space: pre-wrap; word-break: break-all; margin: 0; }
+  .copy { background: #1f6feb; color: #fff; border: 0; border-radius: 6px; padding: 5px 14px; cursor: pointer; font-size: 13px; }
+  .copy:hover { background: #1759c4; }
+  .copied { background: #238636 !important; }
+  footer { margin-top: 28px; font-size: 12px; color: #888; }
+</style>
+</head>
+<body>
+<h1>🩺 Health Condition Tracker 指令选择器</h1>
+<p class="note">选择下面的指令，点「复制」即可粘贴到 Codex 自动化 / 终端 / 新对话。默认路径为 <code>D:\codex-skills\health-condition-tracker</code>，换过位置请自行改路径；成员名占位符（如 <code>&lt;名字&gt;</code> / 妈妈）请按实际替换。免责声明：以上内容仅供参考，不能替代专业医疗诊断。</p>
+
+<h2 class="cat">对话模板（粘贴到 Codex 新对话）</h2>
+<div class="card"><div class="card-head"><h3>病情录入向导（对话版）</h3><button class="copy" data-idx="0">复制</button></div>
+<p class="desc">让 Codex 在对话里按向导流程提问：多档案 → 症状 → 补充既往 → 追问 → 选档案 → 可视化 → 视图报告。</p>
+<pre id="code-0">使用 health-condition-tracker 技能，按以下顺序帮我走一遍「病情录入向导」：
+1. 如果还没开启多家人档案，先问我是否开启；
+2. 问我本次症状（可多个）、严重程度（1-10）、发病日期、持续时长、备注；
+3. 问我是否需要补充之前更早的病情（需要的话帮我回填真实发病日期）；
+4. 根据我的症状追问 2-3 个相关问题（部位、诱因、伴随症状、缓解方式、检查用药等）；
+5. 开启多家人档案时，问我本次病情添加到哪个档案（已有档案 / 新建 / 默认）；
+6. 保存记录后，用 scripts/intake.py 或 scripts/charts.py 给出可视化分析摘要；
+7. 问我是否生成病情视图报告（HTML），需要就运行 scripts/condition_report.py --member <名字>。
+最后附免责声明。</pre></div>
+
+<h2 class="cat">定时任务模板（粘贴到 Codex 自动化 / Automations）</h2>
+<div class="card"><div class="card-head"><h3>每月健康快照</h3><button class="copy" data-idx="1">复制</button></div>
+<p class="desc">每月 1 日自动生成全家健康总览，适合低频使用。</p>
+<pre id="code-1">运行 D:\codex-skills\health-condition-tracker\scripts\snapshot.py --all-members，
+然后用中文给我一份健康总览摘要，包含：
+1. 距上次记录天数（超过 7 天时提醒补录新症状或上传报告）
+2. 逾期复诊 / 即将复诊（重点标出已逾期项目）
+3. 进行中用药
+4. 近 30 / 90 天症状统计
+5. 待办事项与建议下一步
+最后附免责声明。</pre></div>
+<div class="card"><div class="card-head"><h3>每周健康快照</h3><button class="copy" data-idx="2">复制</button></div>
+<p class="desc">每周一简短健康周报（可选；正常时一句话带过）。</p>
+<pre id="code-2">运行 D:\codex-skills\health-condition-tracker\scripts\snapshot.py --all-members，
+然后用中文给我一份简短的健康周报：
+1. 距上次记录天数
+2. 逾期 / 临近复诊（重点标出已逾期）
+3. 进行中用药及到期停药
+4. 近 30 天症状统计
+5. 一句话建议下一步
+最后附免责声明。若一切正常，一句话带过即可。</pre></div>
+<div class="card"><div class="card-head"><h3>就诊前报告</h3><button class="copy" data-idx="3">复制</button></div>
+<p class="desc">就诊前一天/当天生成医生沟通报告（替换 &lt;名字&gt;）。</p>
+<pre id="code-3">运行 D:\codex-skills\health-condition-tracker\scripts\report_generator.py --member &lt;名字&gt;，
+然后用中文给我：
+1. 报告核心摘要（主诉 / 症状时间线 / 用药清单 / 治疗方案与复诊）
+2. 提醒检查报告中是否含姓名、身份证号、手机号（应已脱敏）
+3. 列出就诊时建议咨询医生的问题清单（3-5 个）
+4. 给出报告文件位置
+最后附免责声明。</pre></div>
+
+<h2 class="cat">常用命令（先在终端 cd 到 D:\codex-skills\health-condition-tracker）</h2>
+<div class="card"><div class="card-head"><h3>病情录入向导（交互）</h3><button class="copy" data-idx="4">复制</button></div>
+<p class="desc">一问一答录入：多档案开关 → 症状 → 补充既往 → 追问 → 选档案 → 可视化 → 视图报告。</p>
+<pre id="code-4">python scripts\intake.py</pre></div>
+<div class="card"><div class="card-head"><h3>快速录入病情</h3><button class="copy" data-idx="5">复制</button></div>
+<p class="desc">一条命令保存症状，自动可视化，加 --report 生成视图报告。</p>
+<pre id="code-5">python scripts\intake.py --symptom 头痛 --severity 6 --member 妈妈 --report</pre></div>
+<div class="card"><div class="card-head"><h3>开启多家人档案</h3><button class="copy" data-idx="6">复制</button></div>
+<p class="desc">开启后每次录入会询问「添加到哪个档案」；用 --disable-multi 关闭。</p>
+<pre id="code-6">python scripts\intake.py --enable-multi</pre></div>
+<div class="card"><div class="card-head"><h3>查看已有档案</h3><button class="copy" data-idx="7">复制</button></div>
+<p class="desc">列出多家人档案开关状态与已有成员。</p>
+<pre id="code-7">python scripts\intake.py --list-members</pre></div>
+<div class="card"><div class="card-head"><h3>病情视图报告</h3><button class="copy" data-idx="8">复制</button></div>
+<p class="desc">生成自带图表的 HTML 报告（时间线 + 统计 + 图表 + 用药 + 治疗方案）。</p>
+<pre id="code-8">python scripts\condition_report.py --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>间隔期总览</h3><button class="copy" data-idx="9">复制</button></div>
+<p class="desc">隔几周回来，一条命令看全家要点。</p>
+<pre id="code-9">python scripts\snapshot.py --all-members</pre></div>
+<div class="card"><div class="card-head"><h3>记录症状（今天）</h3><button class="copy" data-idx="10">复制</button></div>
+<p class="desc">给某位成员补录症状。</p>
+<pre id="code-10">python scripts\symptom_log.py --symptom 头痛 --severity 6 --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>记录症状（回填发病日期）</h3><button class="copy" data-idx="11">复制</button></div>
+<p class="desc">隔几周补录时填真实发病日期。</p>
+<pre id="code-11">python scripts\symptom_log.py --symptom 咳嗽 --severity 5 --date 2026-08-10 --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>复诊 / 停药提醒</h3><button class="copy" data-idx="12">复制</button></div>
+<p class="desc">列出 14 天内复诊与停药提醒（含逾期）。</p>
+<pre id="code-12">python scripts\reminders.py --all-members --days 14</pre></div>
+<div class="card"><div class="card-head"><h3>趋势分析</h3><button class="copy" data-idx="13">复制</button></div>
+<p class="desc">症状频率与严重程度趋势。</p>
+<pre id="code-13">python scripts\trend_analysis.py --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>图表可视化</h3><button class="copy" data-idx="14">复制</button></div>
+<p class="desc">症状频次 / 严重程度 / 体征趋势 PNG（需 matplotlib）。</p>
+<pre id="code-14">python scripts\charts.py --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>日历热力图</h3><button class="copy" data-idx="15">复制</button></div>
+<p class="desc">按月症状严重程度热力图（需 matplotlib）。</p>
+<pre id="code-15">python scripts\calendar_heatmap.py --year 2026 --month 9 --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>联网搜索</h3><button class="copy" data-idx="16">复制</button></div>
+<p class="desc">多引擎交叉验证（DuckDuckGo/Bing/Mojeek/维基），官方来源优先。</p>
+<pre id="code-16">python scripts\web_search.py "偏头痛 治疗"</pre></div>
+<div class="card"><div class="card-head"><h3>OCR 读图</h3><button class="copy" data-idx="17">复制</button></div>
+<p class="desc">从化验单 / 照片提取文字（需 Tesseract）。</p>
+<pre id="code-17">python scripts\image_processor.py "图片路径.png"</pre></div>
+<div class="card"><div class="card-head"><h3>医生沟通报告</h3><button class="copy" data-idx="18">复制</button></div>
+<p class="desc">生成 Markdown 就诊报告。</p>
+<pre id="code-18">python scripts\report_generator.py --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>用药管理</h3><button class="copy" data-idx="19">复制</button></div>
+<p class="desc">添加 / 查看 / 删除用药记录。</p>
+<pre id="code-19">python scripts\medication_tracker.py add --name 布洛芬 --dosage 400mg --frequency 每日2次 --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>治疗方案</h3><button class="copy" data-idx="20">复制</button></div>
+<p class="desc">保存诊断、建议、复诊时间。</p>
+<pre id="code-20">python scripts\treatment_plan.py add --diagnosis 高血压 --advice 按时服药 --follow-up 2026-09-05 --member 妈妈</pre></div>
+
+<div class="card"><div class="card-head"><h3>建议科室查询</h3><button class="copy" data-idx="21">复制</button></div>
+<p class="desc">按成员近期症状推荐就诊科室（就诊前用）。</p>
+<pre id="code-21">python scripts\departments.py --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>一键备份全家数据</h3><button class="copy" data-idx="22">复制</button></div>
+<p class="desc">全家数据打包 zip（JSON + CSV + 图表），CSV 可用 Excel 打开。</p>
+<pre id="code-22">python scripts\export_data.py --all-members</pre></div>
+<div class="card"><div class="card-head"><h3>病情视图报告（带备注）</h3><button class="copy" data-idx="23">复制</button></div>
+<p class="desc">在报告「建议下一步」里追加备注。</p>
+<pre id="code-23">python scripts\condition_report.py --member 妈妈 --note "建议检查血常规和血压"</pre></div>
+<div class="card"><div class="card-head"><h3>就诊意见 + 十大医院</h3><button class="copy" data-idx="24">复制</button></div>
+<p class="desc">按成员症状推荐全国十大医院，结合患者城市给就诊方案（把城市换成实际城市）。</p>
+<pre id="code-24">python scripts\hospital_advice.py --member 妈妈 --city 杭州 --province 浙江</pre></div>
+<div class="card"><div class="card-head"><h3>病情分析（含联网客观摘要）</h3><button class="copy" data-idx="25">复制</button></div>
+<p class="desc">风险分级 + 症状组合分析 + 快速客观评估（--quiz，3 题可选填）+ 联网摘要（不被带偏）。</p>
+<pre id="code-25">python scripts\analyze.py 头痛 发热 --quiz --web</pre></div>
+<div class="card"><div class="card-head"><h3>难受程度客观评估</h3><button class="copy" data-idx="26">复制</button></div>
+<p class="desc">快速版只问 3 个问题、全部可留空跳过；需要更细用 --full（每项也可跳过）。结果存成员档案。</p>
+<pre id="code-26">python scripts\severity_quiz.py --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>只看官方来源搜索</h3><button class="copy" data-idx="27">复制</button></div>
+<p class="desc">只显示政府/卫健委/疾控/WHO/PubMed等官方权威来源。</p>
+<pre id="code-27">python scripts\web_search.py "高血压 防治指南" --official</pre></div>
+<div class="card"><div class="card-head"><h3>报告单/体检单解读</h3><button class="copy" data-idx="28">复制</button></div>
+<p class="desc">OCR 化验单/体检单/CT报告文字 → 异常标记 + 危急值提醒 + 与上次对比（CT影像原图请以放射科报告为准）。</p>
+<pre id="code-28">python scripts\lab_analyzer.py "报告单.jpg" --member 妈妈 --compare</pre></div>
+<div class="card"><div class="card-head"><h3>长期病程分析（客观校准）</h3><button class="copy" data-idx="29">复制</button></div>
+<p class="desc">按病程和趋势客观校准：慢性稳定自动降级不吓人，加重才升级。</p>
+<pre id="code-29">python scripts\analyze.py 腹痛 --severity 6 --duration 2个月 --trend 平稳 --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>国际权威就诊路径</h3><button class="copy" data-idx="30">复制</button></div>
+<p class="desc">按 NHS/Mayo/CDC/WHO 指南给出分档就诊路径（家庭观察→门诊→近期→尽快→急诊）。</p>
+<pre id="code-30">python scripts\analyze.py 腹痛 --severity 6 --duration 2天 --trend 平稳 --member 妈妈</pre></div>
+<div class="card"><div class="card-head"><h3>回归测试（100+16 组）</h3><button class="copy" data-idx="31">复制</button></div>
+<p class="desc">改完算法必跑：100 组正常人 + 16 组边界，验证符合一般人体感。</p>
+<pre id="code-31">python scripts\self_test.py --show</pre></div>
+<footer>由 health-condition-tracker 技能生成 · 离线可用</footer>
+<script>
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); } catch (e) {}
+  document.body.removeChild(ta);
+}
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.getElementById('code-' + btn.dataset.idx).innerText;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { flash(btn); });
+    } else { fallbackCopy(text); flash(btn); }
+  });
+});
+function flash(btn) {
+  var old = btn.textContent; btn.textContent = '已复制 ✓'; btn.classList.add('copied');
+  setTimeout(function () { btn.textContent = old; btn.classList.remove('copied'); }, 1200);
+}
+</script>
+</body>
+</html>

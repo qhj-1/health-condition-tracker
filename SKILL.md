@@ -7,6 +7,8 @@ description: 长期全面记录身体症状、生活习惯、用药和治疗方�
 
 > 本技能用于长期全面记录病情、分析病症、提供治疗养护方案与健康建议，并支持生成医生沟通报告与病情视图报告。
 
+> 🌐 **网页版**：另有纯前端网页应用（免安装、免 Python、数据仅存浏览器本地），入口 docs/index.html，线上 https://qhj-1.github.io/health-condition-tracker/ ；桌面版指令选择器在 docs/selector.html。
+
 ## 1. 使用场景
 
 本技能适用于以下典型场景（包括但不限于）：
