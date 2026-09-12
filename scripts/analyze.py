@@ -19,6 +19,7 @@ import argparse
 import functools
 import json
 import os
+import re
 import sys
 
 import common

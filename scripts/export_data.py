@@ -107,6 +107,7 @@ def export(members, output_path=None, keep=10):
     if parent:
         os.makedirs(parent, exist_ok=True)
     stats = []
+    summary_lines = ["health-condition-tracker 数据备份", "时间：" + datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ""]
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
         cfg_path = common.config_path()
         if os.path.exists(cfg_path):
@@ -118,10 +119,10 @@ def export(members, output_path=None, keep=10):
             _add_csv(zf, folder, member)
             count = len([n for n in zf.namelist() if n.startswith(folder + "/")])
             stats.append((member or "默认档案", count))
-    summary_lines = ["health-condition-tracker 数据备份", "时间：" + datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ""]
-    for who, count in stats:
-        summary_lines.append("{}：{} 个文件".format(who, count))
-    zf.writestr("summary.txt", "\n".join(summary_lines))
+        for who, count in stats:
+            summary_lines.append("{}：{} 个文件".format(who, count))
+        # summary.txt 必须在 with 块内写入（zip 关闭后写入会抛 ValueError）
+        zf.writestr("summary.txt", "\n".join(summary_lines))
 
     # 轮转：只保留最近 keep 份备份
     if not output_path:

@@ -28,6 +28,7 @@ try:
 except ImportError:
     plt = None
     font_manager = None
+    colormaps = None
     Normalize = None
 
 
@@ -102,7 +103,11 @@ def render_heatmap(year, month, member=None):
             labels[r][c] = str(day)
 
     fig, ax = plt.subplots(figsize=(10, 1.4 * rows + 1.6))
-    cmap = colormaps["YlOrRd"].copy()
+    if colormaps is not None:
+        cmap = colormaps["YlOrRd"].copy()
+    else:
+        # matplotlib < 3.6 没有 matplotlib.colormaps，退回旧 API
+        cmap = plt.get_cmap("YlOrRd").copy()
     cmap.set_under("#FFFFFF")
     im = ax.imshow(data, cmap=cmap, norm=Normalize(vmin=0.5, vmax=10), aspect="auto")
     ax.set_xticks(range(7))
@@ -142,7 +147,7 @@ def main():
         member = None
 
     if plt is None:
-        print("[错误] 缺少 matplotlib。请先安装：")
+        print("[错误] 缺少 matplotlib（或版本过旧）。请安装 / 升级：")
         print("    pip install matplotlib")
         return 1
     _setup_chinese_font()

@@ -101,6 +101,13 @@ python scripts\self_test.py             # 全部
 python scripts\self_test.py --only edge # 只看边界
 ```
 
+## 🧰 维护自检（开发者）
+
+```powershell
+python scripts\self_test.py     # 风险分级回归（100 组正常人 + 16 组边界）
+python scripts\_flow_check.py   # 静态自检：分支未赋值 / 缺少 import（返回 0 表示干净）
+```
+
 ## ⚠️ 免责声明
 本技能所有内容仅供参考，不能替代专业医疗诊断、治疗或处方。风险分级是保守筛查，用于提醒就医时机，不构成诊断；请以医生意见为准。
 
